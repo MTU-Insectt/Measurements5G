@@ -13,7 +13,12 @@ It is included here to represent a situation where the 5G modem has no access to
 Data5G_static5G_070322.csv contains data recorded on 07 March 2022, in a static location in Cork City where 5G coverage was available.
 Note that the data rates in this measurement are relatively low, which can be explained by the 5G channel parameters also being low, indicating borderline coverage in this static location.
 
-The subfolder "cleaned" contains the same recordings, but with three kinds of entries removed:
+Data5G_stationary_lowtraffic_270622.csv contains data recorded over several hours on 27 June 2022, in a stationary location on MTU campus.
+No iPerf traffic was sent during this recording, so the traffic going over the interface was low, not maxing out the interface. Instead, the purpose here was to record a long-term sequence of channel parameter values.
+Even though the location was stationary, 5G went on and off during the recording, in part due to traffic or nor traffic on the interface, and in part due to fluctuations in coverage.
+
+
+The subfolder "cleaned" contains the first four recordings, but with three kinds of entries removed:
 - The first few samples before iPerf UDP traffic generation started.
 - Any lines where no channel parameters were obtained (i.e. all parameters are zeros).
 - Any lines where the sent bytes parameter could not be obtained from the modem, and the next line in each of those cases (missing sent bytes parameter leads to miscalculated data rates).
