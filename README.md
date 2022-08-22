@@ -24,3 +24,8 @@ The subfolder "cleaned" contains the first four recordings, but with three kinds
 - The first few samples before iPerf UDP traffic generation started.
 - Any lines where no channel parameters were obtained (i.e. all parameters are zeros).
 - Any lines where the sent bytes parameter could not be obtained from the modem, and the next line in each of those cases (missing sent bytes parameter leads to miscalculated data rates).
+
+
+The subfolder "all_interfaces" contains data recorded on 20 August 2022, travelling on a route from MTU -> Victoria Cross -> Sundays Well -> City Centre -> University College Cork -> MTU.
+For this recording, iPerf traffic was sent on all three interfaces (3G, 4G and 5G modems). The 3G and 4G recordings are in the files DataUMTS.csv and DataLTE.csv.
+There is a subfolder "cleaned and synced" in the "all_interfaces" folder. This subfolder contains the recordings, cropped to the time window where traffic was sent on all interfaces. They are synchronised so that each row represents the same timestamp across all three files.
